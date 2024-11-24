@@ -1,4 +1,4 @@
-k@extends('admin.layouts.master')
+@extends('admin.layouts.master')
 @section('content')
 	<div class="h-full bg-white p-4">
 
