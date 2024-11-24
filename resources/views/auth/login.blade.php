@@ -44,7 +44,7 @@
 			<div class="z-50 w-full rounded-lg bg-white opacity-95 shadow dark:border sm:w-1/3 xl:p-0">
 				<div class="space-y-4 p-6 sm:p-8 md:space-y-6">
 					<div class="flex justify-center p-0">
-						<img src="{{ asset('storage/images/dalogo.png') }}" class="h-36 text-center">
+						<img src="{{ asset('storage/app/public/images/dalogo.png') }}" class="h-36 text-center">
 					</div>
 					<form id="loginForm" class="space-y-4 md:space-y-6" action="{{ url('/login') }}" method="POST" autocomplete="off">
 						@csrf
