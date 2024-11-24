@@ -60,21 +60,21 @@ class AuthController extends Controller
         }
             $input = $request->all();
         
-        try {
-            User::create($input);
+            try {
+                User::create($input);
+        
+                $recipient = $request->input('email');
+                $message = "Please Verify Your Account";
+                $request->session()->flash('email', $recipient);
     
-            $recipient = $request->input('email');
-            $message = "Please Verify Your Account";
-            $request->session()->flash('email', $recipient);
-
-            Mail::to($recipient)->send(new VerifyMail($message));
-    
-            return redirect('/login')->with('success', 'Signup successful! Please verify your email.');
-    
-        } catch (\Exception $e) {
-            $request->session()->flash('error', 'Signup failed. Please try again.');
-            return redirect()->back()->withInput();
-        }
+                // Mail::to($recipient)->send(new VerifyMail($message));
+        
+                return redirect('/login')->with('success', 'Signup successful! Please verify your email.');
+        
+            } catch (\Exception $e) {
+                $request->session()->flash('error', 'Signup failed. Please try again.');
+                return redirect()->back()->withInput();
+            }
     }
 
     public function showVerify(){
