@@ -44,8 +44,10 @@ class AdminIncomingController extends Controller
         $file->update([
             'code' => $code,
             'recieved_date' => now(),
-            'active_years' => now()->addYear($active_years) ,
-            'inactive_years' => now()->addYear($active_years + $inactive_years),
+            // 'active_years' => now()->addYear($active_years) ,
+            // 'inactive_years' => now()->addYear($active_years + $inactive_years),
+            'active_years' => now()->addMinutes($active_years),
+'inactive_years' => now()->addMinutes(($active_years + $inactive_years)),
             'status' => 'received',
             'stage' => 'active', 
             'description' => $description,
