@@ -65,12 +65,12 @@
 					</a>
 				</li>
 
-				<li class="{{ request()->is('record') ? 'bg-green-800' : 'bg-green-600' }} mb-4 rounded-md p-2 text-xl font-semibold text-white hover:bg-green-500">
+				{{-- <li class="{{ request()->is('record') ? 'bg-green-800' : 'bg-green-600' }} mb-4 rounded-md p-2 text-xl font-semibold text-white hover:bg-green-500">
 					<a href="/record" class="flex h-full w-full items-center">
 						<i class="fa-solid fa-print mr-2 text-white"></i>
 						<span class="menu-text">Reports</span>
 					</a>
-				</li>
+				</li> --}}
 
 				<li class="{{ request()->is('office-profile') ? 'bg-green-800' : 'bg-green-600' }} mb-4 rounded-md p-2 text-xl font-semibold text-white hover:bg-green-500">
 					<a href="/office-profile" class="flex h-full w-full items-center">
