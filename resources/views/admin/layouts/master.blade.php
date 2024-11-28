@@ -79,12 +79,12 @@
 						<span class="menu-text">Users</span>
 					</a>
 				</li>
-				<li class="{{ request()->is('admin-records') ? 'bg-green-800' : 'bg-green-600' }} mb-4 rounded-md bg-green-600 text-xl font-semibold text-white hover:bg-green-500">
+				{{-- <li class="{{ request()->is('admin-records') ? 'bg-green-800' : 'bg-green-600' }} mb-4 rounded-md bg-green-600 text-xl font-semibold text-white hover:bg-green-500">
 					<a href="{{ url('/admin-records') }}" class="flex h-full w-full items-center p-2">
 						<i class="fa-solid fa-print mr-2 text-white"></i>
 						<span class="menu-text">Reports</span>
 					</a>
-				</li>
+				</li> --}}
 				<li class="{{ request()->is('admin-profile') ? 'bg-green-800' : 'bg-green-600' }} mb-4 rounded-md bg-green-600 text-xl font-semibold text-white hover:bg-green-500">
 					<a href="{{ url('/admin-profile') }}" class="flex h-full w-full items-center p-2">
 						<i class="fa-solid fa-gear mr-2 text-white"></i>
