@@ -38,7 +38,7 @@ class AdminIncomingController extends Controller
         ]);
 
         $message = "The Agirultural Training Institute Recods Office sucessfylly received your document.";
-        // Mail::to($address_from)->send(new AcceptMail($message));
+        Mail::to($address_from)->send(new AcceptMail($message));
 
 
         $file->update([
@@ -136,7 +136,7 @@ class AdminIncomingController extends Controller
                 'forwarded_data' => now(),
             ]);
             $message = "The Agirultural Training Institute Recods Office sucessfylly forwarded your document.";
-            // Mail::to($file->address_from)->send(new AcceptMail($message));
+            Mail::to($file->address_from)->send(new AcceptMail($message));
         }
         else{
             $outgoingemail = $file->outgoing_email;

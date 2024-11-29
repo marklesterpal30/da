@@ -40,7 +40,7 @@ class OfficeIncomingController extends Controller
             ]);
             $office = Auth::user()->name;
             $message = "The Agricultural Training Institute $office successfully received your document.";
-            // Mail::to($file->address_from)->send(new AcceptMail($message));
+            Mail::to($file->address_from)->send(new AcceptMail($message));
             
         } else {
             $file->update([
@@ -49,7 +49,7 @@ class OfficeIncomingController extends Controller
             $office = Auth::user()->name;
 
             $message = "The Agricultural Training Institute $office successfully received your document.";
-            // Mail::to($file->address_from)->send(new AcceptMail($message));
+            Mail::to($file->address_from)->send(new AcceptMail($message));
             
         }
 
