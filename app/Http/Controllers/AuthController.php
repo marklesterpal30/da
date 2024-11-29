@@ -67,7 +67,7 @@ class AuthController extends Controller
                 $message = "Please Verify Your Account";
                 $request->session()->flash('email', $recipient);
     
-                // Mail::to($recipient)->send(new VerifyMail($message));
+                Mail::to($recipient)->send(new VerifyMail($message));
         
                 return redirect('/login')->with('success', 'Signup successful! Please verify your email.');
         
