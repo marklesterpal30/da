@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<hr>
-			k
+
 			<!-- FILE NAME, ADDRESS FROM, CATEGORY -->
 			<div class="flex items-start justify-between">
 				<!-- LABEL -->
