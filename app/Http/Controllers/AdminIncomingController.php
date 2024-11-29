@@ -141,7 +141,7 @@ class AdminIncomingController extends Controller
         else{
             $outgoingemail = $file->outgoing_email;
             $filename = $file->file;
-            // Mail::to($outgoingemail)->send(new ForwardDocumentsMail($filename));
+            Mail::to($outgoingemail)->send(new ForwardDocumentsMail($filename));
 
             $file->update([
                 'fowarded_by' => $userId,
